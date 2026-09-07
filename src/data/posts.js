@@ -4,7 +4,8 @@ const posts = [
     displayName: 'Maya Johnson',
     username: 'mayaj',
     time: '18m',
-    content: 'The new mobile dashboard is finally moving from wireframes into code. The spacing pass made a bigger difference than I expected.',
+    content:
+      'The new mobile dashboard is finally moving from wireframes into code. The spacing pass made a bigger difference than I expected.',
     avatar: require('../assets/images/maya.png'),
     imageSource: require('../assets/images/workspace.png'),
     replies: 18,
@@ -18,7 +19,8 @@ const posts = [
     displayName: 'Andre Taylor',
     username: 'andrebuilds',
     time: '41m',
-    content: 'A clean interface is not “empty.” Good hierarchy makes the important information obvious without adding noise.',
+    content:
+      'A clean interface is not “empty.” Good hierarchy makes the important information obvious without adding noise.',
     avatar: require('../assets/images/andre.png'),
     imageSource: null,
     replies: 9,
@@ -32,7 +34,8 @@ const posts = [
     displayName: 'Nina Patel',
     username: 'ninap',
     time: '1h',
-    content: 'Great turnout at tonight’s local tech meetup. Mobile, web, game dev, and cybersecurity people all in one room.',
+    content:
+      'Great turnout at tonight’s local tech meetup. Mobile, web, game dev, and cybersecurity people all in one room.',
     avatar: require('../assets/images/nina.png'),
     imageSource: require('../assets/images/city.png'),
     replies: 27,
@@ -46,7 +49,8 @@ const posts = [
     displayName: 'Leo Carter',
     username: 'leocodes',
     time: '2h',
-    content: 'Today’s reminder: build the static version first, then connect state. Debugging is much easier when layout and logic are not changing at the same time.',
+    content:
+      'Today’s reminder: build the static version first, then connect state. Debugging is much easier when layout and logic are not changing at the same time.',
     avatar: require('../assets/images/leo.png'),
     imageSource: null,
     replies: 14,
@@ -56,7 +60,21 @@ const posts = [
     following: false,
   },
 
-  // TODO 1: Add the original student-created post from Step 2.
-];
+  {
+    id: 'post-205',
+    displayName: 'Jordan Miles',
+    username: 'jmiles',
+    time: '3h',
+    content:
+      'Small UI details matter: consistent icon sizing, clean dividers, and readable spacing can completely change how polished a mobile feed feels.',
+    avatar: require('../assets/images/you.png'),
+    imageSource: null,
+    replies: 6,
+    reposts: 17,
+    likes: 144,
+    views: 5200,
+    following: true,
+  },
+]
 
-export default posts;
+export default posts
