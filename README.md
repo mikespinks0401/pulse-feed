@@ -1,4 +1,5 @@
 # Module 3 Assignment 2
+
 # Pulse Feed — Production Social Feed
 
 ## Objective
@@ -191,11 +192,11 @@ Under `TODO 4`, paste:
 ```javascript
 useEffect(() => {
   const timer = setTimeout(() => {
-    setLoading(false);
-  }, 900);
+    setLoading(false)
+  }, 900)
 
-  return () => clearTimeout(timer);
-}, []);
+  return () => clearTimeout(timer)
+}, [])
 ```
 
 ### Checkpoint
@@ -218,11 +219,11 @@ Replace the `visiblePosts` starter line under `TODO 5` with:
 ```javascript
 const visiblePosts = useMemo(() => {
   if (selectedFeed === 'following') {
-    return posts.filter((post) => post.following);
+    return posts.filter((post) => post.following)
   }
 
-  return posts;
-}, [selectedFeed]);
+  return posts
+}, [selectedFeed])
 ```
 
 ### Checkpoint
@@ -252,8 +253,8 @@ Inside `handleLike(id)`, replace `TODO 6` with:
 setLikedIds((current) =>
   current.includes(id)
     ? current.filter((postId) => postId !== id)
-    : [...current, id]
-);
+    : [...current, id],
+)
 ```
 
 This allows the same post to be liked and unliked.
@@ -275,8 +276,8 @@ Inside `handleBookmark(id)`, replace `TODO 7` with:
 setBookmarkedIds((current) =>
   current.includes(id)
     ? current.filter((postId) => postId !== id)
-    : [...current, id]
-);
+    : [...current, id],
+)
 ```
 
 ### Commit
@@ -302,7 +303,7 @@ function renderPost({ item }) {
       onLike={handleLike}
       onBookmark={handleBookmark}
     />
-  );
+  )
 }
 ```
 
@@ -319,17 +320,19 @@ Find `TODO 9`.
 Replace the placeholder comment with:
 
 ```jsx
-{loading ? (
-  <LoadingState />
-) : (
-  <FlatList
-    contentContainerStyle={styles.listContent}
-    data={visiblePosts}
-    keyExtractor={(item) => item.id}
-    ListEmptyComponent={EmptyFeed}
-    renderItem={renderPost}
-  />
-)}
+{
+  loading ? (
+    <LoadingState />
+  ) : (
+    <FlatList
+      contentContainerStyle={styles.listContent}
+      data={visiblePosts}
+      keyExtractor={(item) => item.id}
+      ListEmptyComponent={EmptyFeed}
+      renderItem={renderPost}
+    />
+  )
+}
 ```
 
 ### Checkpoint
@@ -365,7 +368,7 @@ const visiblePosts = ...
 to:
 
 ```javascript
-const visiblePosts = [];
+const visiblePosts = []
 ```
 
 Save.
